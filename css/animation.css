@@ -1,0 +1,19 @@
+@keyframes fall {
+  from {
+    top: -10%; /* Starter uden for toppen */
+  }
+  to {
+    top: 140%; /* Slutter uden for bunden */
+  }
+}
+
+.falling-gifts {
+  position: absolute;
+  animation: fall 5s linear infinite; /* 5 sekunder for at falde */
+  top: -10%;
+}
+
+.falling-gifts img {
+  width: 50px; /* Juster gavebilledets størrelse */
+  cursor: pointer; /* Gør gaven klikbar */
+}
