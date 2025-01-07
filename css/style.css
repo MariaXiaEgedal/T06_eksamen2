@@ -1,0 +1,400 @@
+/* Base styles */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh; /* Gør, at body fylder hele højden af skærmen */
+}
+
+/**************************** Header ****************************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Sikrer, at menuen er relativ til header */
+}
+
+header img {
+  width: 60%; /*logo*/
+}
+
+/* Menu */
+nav {
+  display: none; /* Hidden by default for mobile */
+}
+
+.burger-menu {
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+nav ul.menu li {
+  margin: 10px 0;
+}
+
+nav ul.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+#burger-toggle {
+  display: none; /* Skjuler tjekboksen */
+}
+
+/* Dropdown menu */
+.menu .dropdown {
+  position: relative;
+}
+
+.menu .dropdown .submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Placerer dropdown lige under menuen */
+  left: 18px;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ea1e1e;
+  z-index: 1000; /* Sørger for, at dropdown-menuen ligger over billederne */
+}
+
+.menu .dropdown .submenu li {
+  margin: 0;
+}
+
+.menu .dropdown .submenu a:hover {
+  background-color: #ea1e1e;
+  color: white;
+}
+
+.menu .dropdown:hover .submenu {
+  display: block; /* Viser dropdown-menuen, når musen holdes over */
+}
+/**************************** Main ****************************/
+
+main {
+  padding: 5px 40px; /* Juster værdien for at få mere eller mindre luft */
+  flex-grow: 1; /* Fylder al resterende plads, så footeren skubbes ned */
+}
+
+h1 {
+  color: #ea1e1e; /* Rød farve */
+  font-size: 5em; /* Gør overskriften større */
+  text-align: center; /* Centrer overskriften */
+  letter-spacing: 8px; /* Tilføj mellemrum mellem bogstaver for mere visuel vægt */
+}
+
+main h2 {
+  font-weight: normal;
+  font-size: 1.2em; /* Justér størrelse efter behov */
+}
+
+h3 {
+  color: #ea1e1e; /* Rød farve */
+  font-weight: bold;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+  gap: 30px; /* Even spacing between items */
+  width: 80%;
+  margin: 0 auto; /* Centrerer grid på siden */
+  gap: 40px; /* Øger afstanden mellem billederne */
+  justify-content: center;
+}
+
+.portfolio-item {
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center; /* Centrerer teksten */
+}
+.portfolio-item:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.portfolio-item img {
+  width: 90%; /* Reducerer størrelsen på billederne */
+  margin: 0 auto; /* Centrerer billederne i deres container */
+  z-index: 1; /* Sørg for, at billedet er under teksten */
+}
+
+.portfolio-item p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.portfolio-content {
+  position: relative; /* Gør det muligt at placere børn relativt */
+}
+
+.portfolio-title {
+  position: absolute; /* Make the text positionable relative to the parent */
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  font-size: 3em; /* Adjust font size as needed */
+  color: #ea1e1e; /* Text color */
+  font-weight: bold; /* Bold text */
+  z-index: 2; /* Ensure it is above the image */
+  pointer-events: none; /* Prevent interaction with the text */
+}
+
+/* Specifik styling til temaerne */
+.tema-h1 {
+  font-size: 2.5em; /* Størrelse på teksten */
+  text-transform: uppercase; /* Store bogstaver */
+  margin-top: 60px; /* Giv lidt luft over */
+  text-align: left; /* Justér teksten til venstre */
+}
+
+/* T01 */
+iframe {
+  width: 100%; /* Fyld containerens bredde */
+  height: auto; /* Bevar proportionerne */
+  aspect-ratio: 16 / 9; /* Sikrer 16:9 format på videoen */
+}
+/* T02 */
+
+/* T04 */
+.game-button img {
+  width: 150px; /* Gør gavesækken mindre */
+  transition: transform 0.3s ease;
+}
+
+.game-button img:hover {
+  transform: scale(1.1); /* Giver en hover-effekt */
+}
+
+/* Om mig */
+.om-mig-layout {
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  border: 5px solid #ea1e1e;
+}
+
+/* CV  og sociale ikoner*/
+.cv-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px; /* Sæt en maksimal bredde */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 50px; /* Ens størrelse på ikoner */
+}
+
+.social-icons a {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Laver en let zoom-effekt */
+}
+
+/**************************** Footer ****************************/
+footer {
+  background-color: #ea1e1e;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+/**************************** Mobile styles ****************************/
+@media (max-width: 768px) {
+  body.index-page {
+    background-size: cover; /* Billedet dækker hele skærmen */
+    background-image: url("../img/forside_mobil.svg"); /* Sti til mobilbilledet */
+  }
+
+  nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ea1e1e;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000; /* Sørger for, at dropdown-menuen ligger over billederne */
+  }
+
+  nav ul.menu li {
+    margin: 10px 0;
+  }
+
+  nav ul.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  nav ul.menu a:hover {
+    color: #ffff;
+    transition: all 0.3s ease; /* Glidende overgang */
+  }
+
+  #burger-toggle:checked + .burger-menu + nav {
+    display: block;
+  }
+
+  /* Main */
+  main h1 {
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+
+  /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+    grid-template-columns: repeat(2, 1fr); /* To kolonner på mobil */
+    gap: 20px; /* Afstand mellem elementer */
+    justify-content: center; /* Centrerer grid vandret */
+    align-content: center; /* Centrerer grid lodret */
+    height: 100vh; /* Fylder hele højden af skærmen */
+    margin: 0 auto; /* Centrerer grid'en i midten af siden */
+  }
+
+  .portfolio-title {
+    font-size: 2em; /* Adjust font size as needed */
+  }
+  .portfolio-item p {
+    font-size: 1.2em; /* Consistent text size */
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+
+  /* T04 */
+  .game-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-button img {
+    width: 100px; /* Mindre på mobil */
+  }
+
+  /* Om mig */
+  .om-mig-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Fotter */
+  footer {
+    font-size: 10px; /* Mindre skriftstørrelse på mobil */
+  }
+}
+
+/**************************** Desktop styles ****************************/
+@media (min-width: 769px) {
+  body.index-page {
+    background-size: cover; /* Billedet dækker hele skærmen */
+    background-image: url("../img/forside_desktop.svg"); /* Sti til desktopbilledet */
+  }
+
+  /* Header */
+  nav {
+    display: block;
+  }
+
+  nav ul.menu {
+    display: flex;
+    gap: 90px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  nav ul.menu a:hover {
+    color: #ea1e1e;
+    transition: all 0.3s ease; /* Glidende overgang */
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .portfolio-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-links a {
+    margin: 5px;
+  }
+
+  /* Main */
+  main {
+    padding: 5px 80px;
+  }
+  main h2,
+  h3 {
+    font-size: x-large;
+  }
+  main p {
+    font-size: larger;
+  }
+
+  /* To-kolonne layout */
+  .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To lige store kolonner */
+    gap: 40px; /* Afstand mellem kolonnerne */
+    align-items: center; /* Juster indholdet vertikalt så det flugter */
+  }
+
+  .left-column {
+    grid-column: 1; /* Placering i venstre kolonne */
+    text-align: left;
+  }
+
+  .right-column {
+    grid-column: 2; /* Placering i højre kolonne */
+    margin-bottom: 15px;
+  }
+
+  .right-column img {
+    margin: 0 auto; /* Centrer billedet */
+    display: block; /* Sørger for, at billedet opfører sig som et blok-element */
+  }
+
+  .img_lille {
+    width: 65%; /* Justér bredden efter behov */
+    margin: 0 auto; /* Centrer billedet */
+    display: block; /* Sørger for, at billedet opfører sig som et blok-element */
+  }
+}

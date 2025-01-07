@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="img/x.svg" />
+    <title>Portfolio T02</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/logo.svg" alt="Logo" />
+      </a>
+      <input type="checkbox" id="burger-toggle" />
+      <label for="burger-toggle" class="burger-menu"> ☰ </label>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Forside</a></li>
+          <li class="dropdown">
+            <a href="portfolio.html">Portfolio</a>
+            <ul class="submenu">
+              <li><a href="t01_intro.html">T01</a></li>
+              <li><a href="t02_web.html">T02</a></li>
+              <li><a href="t03_ux_ui.html">T03</a></li>
+              <li><a href="t04_animation.html">T04</a></li>
+              <li><a href="t05_indhold.html">T05</a></li>
+              <li><a href="t06_eksamen.html">T06</a></li>
+            </ul>
+          </li>
+          <li><a href="om_mig.html">Om mig</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="tema-h1">Portfolio</h1>
+      <h2>Tema 2 - grundlæggende web</h2>
+
+      <!-- Tema beskrivelse -->
+      <div class="two-column-layout">
+        <div class="left-column">
+          <h3>Tema beskrivelse</h3>
+          <p>
+            Vi har arbejdet videre med designpricipper og værktøjer i form af
+            bl.a. Figma, V.S. Code, FileZilla, HTML- og CSS-validering. Vi har
+            arbejdet med responsivt design og en “mobile first” tilgang, css
+            grid, flex, media queries og billedbehandling i Squoosh.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tapas Baren -->
+      <div class="two-column-layout">
+        <div class="left-column">
+          <h3>Mobil version</h3>
+          <p>
+            02.01.01 Mobilsite: <br />
+            Opgaven gik ud på at udarbejde et site, som skulle være
+            mobile-first. Sitet skulle laves ud fra udleverede wireframes og
+            layoutdiagram.
+          </p>
+          <p>
+            Til løsning af opgaven lavede jeg et mobilsite med brug af farver og
+            to fonte. Jeg brugte margin og padding til at få sitet til at se
+            pænt ud og grid til billedgalleriet.
+          </p>
+          <p>
+            Udfordringen for mig var brugen af grid. Resultatet svarede derfor
+            ikke helt til de udleverede wireframes.
+          </p>
+          <p>
+            Link til mobilsite:
+            <a
+              href="https://byxia.dk/kea/1-semester/t02/cpu_website/"
+              target="_blank"
+              >klik her</a
+            >
+          </p>
+        </div>
+        <div class="right-column">
+          <img
+            class="img_lille"
+            src="img/t02_mobil.webp"
+            alt="Mobilsite sider"
+          />
+        </div>
+      </div>
+
+      <!-- Desktop version -->
+      <div class="two-column-layout">
+        <div class="left-column">
+          <h3>Desktop version</h3>
+          <p>
+            02.01.02 Website: <br />
+            På basis af mobilsitet skulle vi udarbejde en desktopversion. Her
+            fik vi også udleveret wireframes og layoutdiagram.
+          </p>
+          <p>
+            Link til website:
+            <a
+              href="https://byxia.dk/kea/1-semester/t02/website/"
+              target="_blank"
+              >klik her</a
+            >
+          </p>
+        </div>
+        <div class="right-column">
+          <img
+            class="img_lille"
+            src="img/t02_desktop1.webp"
+            alt="Desktop side"
+          />
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; Maria Xia Egedal</div>
+    </footer>
+  </body>
+</html>
