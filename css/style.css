@@ -78,6 +78,7 @@ nav ul.menu a {
 .menu .dropdown:hover .submenu {
   display: block; /* Viser dropdown-menuen, når musen holdes over */
 }
+
 /**************************** Main ****************************/
 
 main {
@@ -166,9 +167,8 @@ main img {
 iframe {
   width: 100%; /* Fyld containerens bredde */
   height: auto; /* Bevar proportionerne */
-  aspect-ratio: 16 / 9; /* Sikrer 16:9 format på videoen */
+  aspect-ratio: 16 / 9;
 }
-/* T02 */
 
 /* T04 */
 .game-button img {
@@ -323,10 +323,11 @@ footer {
   }
 
   .portfolio-title {
-    font-size: 2em; /* Adjust font size as needed */
+    font-size: 2em;
   }
+
   .portfolio-item p {
-    font-size: 1.2em; /* Consistent text size */
+    font-size: 1.2em;
     margin-top: 10px;
     margin-bottom: -10px;
   }
@@ -434,7 +435,7 @@ footer {
   }
 
   .img_lille {
-    width: 65%; /* Justér bredden efter behov */
+    width: 65%;
     margin: 0 auto; /* Centrer billedet */
     display: block; /* Sørger for, at billedet opfører sig som et blok-element */
   }
